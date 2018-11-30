@@ -27,5 +27,6 @@ wp-includes/
 /wp-trackback.php
 /xmlrpc.php
 wp-content/themes/trucking/node_modules
+wp-content/themes/trucking/package-lock.json
 .idea/
 wp-content/plugins/query-monitor/
