@@ -1,0 +1,123 @@
+/* footer */
+.main-footer {
+    background-color: #0f1d3f;
+    color: #fff;
+    background-size: cover;
+    background-image: url(../images/pereezd-kvartirnyiy-1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    position: relative;
+    @include darkened-background;
+    &:before {
+        background-color: rgba(15, 29, 63, 0.82);
+    }
+}
+
+.copyright-footer {
+    background-color: $second-base-color;
+    padding: 15px;
+}
+
+.button-to-top {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    padding: 0 15px;
+    display: inline-block;
+    background-color: $base-color;
+    cursor: pointer;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    i {
+        color: $second-base-color;
+    }
+    &:hover {
+        opacity: .7;
+    }
+}
+
+.footer-title {
+    position: relative;
+    color: #fff;
+    margin: 30px 0 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    text-align: left;
+    font-size: 19px;
+    &:before {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+    }
+}
+
+.footer-contact-list {
+    li {
+        margin-bottom: 5px;
+    }
+    a {
+        color: #fff;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    i {
+        margin-right: 10px;
+        width: 10px;
+        color: $base-color;
+    }
+
+    & .phones {
+
+    }
+
+    .footer-link-callback {
+        max-width: 188px;
+        width: 100%;
+        display: inline-block;
+        background-color: $base-color;
+        text-align: center;
+        padding: 7px;
+        color: #000;
+        margin: 20px 0;
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
+
+.footer-menu-list {
+    a {
+        color: #fff;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media screen and (min-width: 601px) {
+
+}
+
+@media screen and (min-width: 992px) {
+
+}
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 600px) {
+
+}

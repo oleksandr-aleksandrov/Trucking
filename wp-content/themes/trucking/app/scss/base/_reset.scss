@@ -1,0 +1,72 @@
+@import '../utils/_mixins';
+@import '../utils/_variables';
+
+* {
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: $base-font-family;
+    background-color: $base-bg;
+    height: 100%;
+    line-height: 24px;
+    position: relative;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #232323;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+a {
+    color: $link-color;
+    @include transition($default-transition);
+    &:hover {
+        color: #333;
+        text-decoration: none;
+    }
+}
+
+.main-content {
+    overflow: hidden;
+}
+
+.main-button {
+    display: inline-block;
+    width: 100%;
+    max-width: 250px;
+    background-color: $base-color;
+    padding: 10px 20px;
+    color: #000000;
+    &:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+    box-shadow: 2px 5px 50px 0 rgba(0, 0, 0, 0.22);
+}
+
+ul {
+    padding: 0 !important;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .container {
+        max-width: 95%;
+    }
+}

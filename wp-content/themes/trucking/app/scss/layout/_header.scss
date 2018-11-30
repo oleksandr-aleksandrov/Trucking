@@ -1,0 +1,285 @@
+/* header */
+
+.header-social-network {
+    li {
+        display: inline-block;
+        margin: 0 1px;
+    }
+    a {
+        font-size: 12px;
+        color: #fff;
+        padding: 0 10px;
+        &:hover {
+            color: #fff;
+            opacity: .7;
+        }
+    }
+}
+
+.main-logo-wrapper {
+    img {
+        margin: 10px 0;
+    }
+}
+
+.header-information {
+    background-color: $second-base-color;
+    padding: 4px 0;
+}
+
+.header-sub-menu,
+.header-phones {
+    li {
+        display: inline-block;
+    }
+    a {
+        color: #fff;
+        font-size: 12px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.header-phones {
+    li {
+        padding: 0 5px;
+    }
+}
+
+.header-sub-menu {
+    li {
+        position: relative;
+        padding: 0 20px;
+        &:after {
+            content: ".";
+            display: inline-block;
+            position: absolute;
+            color: #fff;
+            top: -8%;
+            left: -2%;
+        }
+        &:first-child:after {
+            display: none;
+        }
+    }
+}
+
+.header-main-logo {
+    text-align: center;
+    border-top: 6px solid $second-base-color;
+    position: relative;
+    padding-left: 5%;
+    z-index: 10;
+    overflow: hidden;
+    &:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 39px;
+        height: 26px;
+        background: $second-base-color;
+        top: -8px;
+        right: -15px;
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
+.main-menu {
+    background-color: $base-color;
+    &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 60px solid $base-color;
+        border-left: 24px solid transparent;
+        top: 0;
+        left: -24px;
+
+    }
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.header-main-menu {
+    li {
+        letter-spacing: 1px;
+        padding: 18px 25px;
+        position: relative;
+        cursor: pointer;
+        &:before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 1px;
+            height: 17px;
+            background: #fd9c60;
+            top: 37%;
+            left: 0;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 25px;
+            height: 15px;
+            background: url(../images/icon_car.png);
+            left: 4px;
+            visibility: hidden;
+            bottom: 0;
+        }
+        &:hover:after {
+            visibility: visible;
+            left: 44%;
+            -moz-transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+        &:first-child {
+            &:before {
+                display: none;
+            }
+        }
+        &.current_page_item.active {
+
+        }
+        & > .dropdown-menu {
+            width: auto;
+            min-width: 250px;
+            background-color: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            border: 0;
+            border-radius: 0;
+            li {
+                padding: 5px;
+                &:after,
+                &:before {
+                    display: none;
+                }
+                &:hover {
+                    background-color: #f1f1f1;
+                }
+            }
+            .dropdown-item {
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    a {
+        color: #000;
+        text-transform: uppercase;
+        padding: 0;
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
+
+.header-callback {
+    text-align: center;
+    align-items: center;
+    padding-top: 25px;
+    &-item:before {
+        content: "";
+        display: inline-block;
+        background: #e6e6e6;
+        height: 35px;
+        @include vertical_center_transform;
+        width: 1px;
+    }
+    &-item:first-child:before {
+        display: none;
+    }
+}
+
+.time-work-info,
+.free-main-phone {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.free-main-phone {
+    a {
+        color: #000;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 0 20px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.button-wrapper {
+    .main-button {
+        margin-bottom: 10px;
+    }
+}
+
+.button-callback {
+    background-color: #0f1d3f;
+    color: #fff;
+    &:hover {
+        color: #fff;
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1350px) {
+    .main-nav {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .header-main-menu li {
+        letter-spacing: 0;
+        padding: 15px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (max-width: 991px) {
+    .header-main-menu {
+
+        .dropdown-menu {
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+        li {
+            padding: 11px 30px;
+            &:after {
+                display: none;
+            }
+        }
+        .dropdown-menu {
+            padding-left: 10px;
+        }
+    }
+    .header-callback-item:last-child:before {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 680px) {
+
+}
+
+@media only screen and(max-width: 320px) {
+}
